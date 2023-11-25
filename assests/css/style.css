@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@500&family=Poppins:wght@700&display=swap');
+
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #fff;
+  --text-color: #555;
+  --title-color: #000;
+}
+
+.dark-theme {
+  --background-color: #000;
+  --text-color: #999;
+  --title-color: #fff;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* cursor: none; */
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  animation: ripple-effect 0.7s ease-out;
+}
+
+@keyframes ripple-effect {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* #mains {
+  display: none;
+} */
+
+.cursor-dot {
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  box-shadow: 0 0 0 black;
+  animation: cursorAnim 5s ease-in-out infinite;
+}
+
+.cursor-outline {
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 99;
+  pointer-events: none;
+}
+
+/* main {
+  display: none;
+} */
+
+/* nav bar css */
+
+.navbar {
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.logo-div {
+  font-size: 17px;
+  padding: 26px 30px;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list li {
+  list-style: none;
+  padding: 26px 30px;
+}
+
+.nav-list li a {
+  position: relative;
+  transition: all 0.25s ease-out;
+}
+
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.50s ease-out;
+}
+
+.nav-list li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-list a {
+  color: white;
+}
+
+.nav-list li a {
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  text-decoration: none;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.burger {
+  display: none;
+  position: relative;
+  top: 15px;
+  right: 5%;
+  cursor: pointer;
+}
+
+.line {
+  width: 33px;
+  background-color: rgb(255, 255, 255);
+  height: 4px;
+  margin: 5px 3px;
+  /* transition: transform 0.5s ease-in-out, translate 0.5s ease-in-out; */
+}
+
+/* .burger:hover .line1 {
+  transform: rotate(45deg);
+  position: relative;
+  top: 10px;
+  width: 40px;
+  height: 6px;
+  translate: 10px;
+}
+
+.burger:hover .line2 {
+  display: none;
+}
+
+.burger:hover .line3 {
+  transform: rotate(-45deg);
+  translate: 10px;
+  width: 40px;
+  height: 6px;
+} */
+
+#nicon {
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+@media screen and (max-width: 757px) {
+  .navbar {
+    height: 478px;  
+    transition: all 0.5s ease-out;
+}
+
+.nav-list {
+    flex-direction: column;
+}
+
+.burger {
+    display: block;
+}
+
+.h-nav-resp {
+    height: 72px;
+}
+
+.v-class-resp {
+    opacity: 0;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* nav {
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-div {
+  color: black;
+  font-family: "League Spartan";
+  font-size: 20px;
+  padding-left: 120px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.ul-div ul {
+  display: flex;
+}
+
+.ul-div ul i {
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+
+.list-items {
+  list-style: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.list-items a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "League Spartan";
+  position: relative;
+  transition: all 0.25s;
+}
+
+.list-items a:hover {
+  color: blue;
+} */
+
+/* 
+.list-items a::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: blue;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.25s ease-out;
+  transition-delay: 0.50s;
+  transition-duration: 2s;
+  transition-property: all;
+  transition-timing-function: linear;
+}
+
+.list-items a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+} */
+
+/* .home a {
+  color: blue;
+  border-bottom: 3.5px solid blue;
+}
+
+.burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 15px;
+  cursor: pointer;
+}
+
+.line {
+  height: 4px;
+  width: 33px;
+  margin: 5px 3px;
+  background-color: black;
+  /* position: relative;
+  top: 30px;
+  right: 10px;
+} */
+
+/* nav bar css end */
+
+/* home css */
+
+.home-div {
+  display: flex;
+  justify-content: space-between;
+  height: 710px;
+}
+
+.left-div {
+  margin-left: 130px;
+  margin-top: 250px;
+}
+
+.left-div h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 42px;
+}
+
+.left-div h1 span {
+  transform: translate(-50%, -50%);
+  /* -webkit-text-stroke: 1px #fff; */
+  color: transparent;
+  background: linear-gradient(rgba(0,0,0,0.6), #00b3ff);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -165px 0px;
+  animation: backcolor  3s linear infinite alternate;
+}
+
+@keyframes backcolor {
+  100%{
+    background-position: 0 0;
+  }
+}
+
+.left-div span {
+  font-family: "Poppins", sans-serif;
+  font-size: 42px;
+}
+
+.left-div button {
+  padding: 1vw 1.5vw;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.splash-img {
+  height: 500px;
+  position: absolute;
+  right: 100px;
+  top: 150px;
+}
+
+.z-img {
+  height: 400px;
+  position: absolute;
+  right: 150px;
+  top: 100px;
+  /* z-index: 5; */
+}
+
+.home-icons i {
+  color: white;
+  font-size: 48px;
+}
+
+@media (max-width: 1156px) {
+  .home-div {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    height: 910px; /* Adjust height as needed for content */
+  }
+
+  .left-div {
+    margin-top: 100px; /* Adjust margins for better spacing */
+    margin-right: 100px;
+    text-align: center; /* Center text within left-div */
+  }
+
+  .splash-img, .z-img {
+    position: relative; /* Remove 'absolute' positioning */
+    right: auto;
+    top: auto;
+  }
+}
+
+/* home css end */
+
+/* skills css */
+
+.skills {
+  height: 600px;
+}
+
+.skills h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.skills-main {
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 80px;
+  border-radius: 10px;
+}
+
+.skills-main i {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.fa-brands {
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 174, 255, 0.5);
+}
+
+.fa-html5 {
+  color: rgb(255, 68, 0);
+}
+
+.fa-css3 {
+  color: rgb(44, 44, 255);
+}
+
+.fa-js {
+  color: gold;
+}
+
+.fa-bootstrap {
+  color: rgb(112, 39, 221);
+}
+
+.fa-react {
+  color: cyan;
+}
+
+.fa-php {
+  color: #787cb5;
+}
+
+.fa-java {
+  color: orangered;
+}
+
+.fa-swift {
+  color: red;
+}
+
+/* skills css end */
+
+/* .myknow h1 {
+  text-align: center;
+  font-family: 'League Spartan';
+}
+
+.pre1 {
+  margin-top: 50px;
+  background-color: #1c1b3a;
+  color: white;
+  display: inline-block;
+}
+
+.pre1 button {
+  position: absolute;
+  left: 2px;
+  top: 1292px;
+  background: none;
+  cursor: pointer;
+  color: white;
+  border: 3px solid white;
+}
+
+.codespan {
+  color: rgb(72, 72, 245);
+}
+
+.brspan {
+  color: grey;
+}
+
+.classspan {
+  color: rgb(115, 250, 252);
+}
+
+.clname {
+  color: rgb(255, 123, 0);
+}
+
+.cssclassb {
+  color: #e66e1e;
+}
+
+.propcss {
+  color: lightskyblue;
+}
+
+.propent {
+  color: rgb(255, 60, 0);
+} */
+
+/* project css */
+
+.portfolio {
+  margin-top: 50px;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.project {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  /* display: flex;
+  justify-content: space-around; */
+  box-shadow: 0 0 20px rgb(0, 153, 255);
+}
+
+.project img {
+  width: 100%;
+  height: 100%wwww;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #00b3ff);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0, 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.layer i {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.layer a {
+  color: black;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+.project:hover .layer {
+  height: 100%;
+}
+/* 
+.progress-bars {
+  margin-left: 100px;
+}
+
+.progress-bar {
+  width: 500px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: rgb(226, 226, 226);
+}
+
+.anim-bar {
+  width: 0;
+  height: 20px;
+  font-family: 'Poppins',sans-serif;
+  border-radius: 20px;
+  background-color: blue;
+  animation-name: progress;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 3s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+} */
+
+footer {
+  height: 310px;
+  margin-top: 50px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  margin-left: 450px;
+}
+
+.right-form {
+  padding: 20px;
+}
+
+.left-form {
+  padding: 20px;
+}
+
+.linehr {
+  width: 200px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.right-form input {
+  padding-top: 20px;
+  border: none;
+  font-family: 'Open Sans';
+  background-color: #000;
+  color: white;
+}
+
+.right-form input:focus {
+  outline: 0px;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+.left-footer h1 span {
+  color: rgb(0, 204, 255);
+}
+
+.left-footer h1 {
+  text-align: center;
+  font-family: 'League Spartan';
+}
+
+input:focus::-webkit-input-placeholder {
+  font-size: 20px;
+  position: relative;
+  bottom: 20px; 
+  transition: 0.2s ease-out;
+}
+
+input::-webkit-input-placeholder {
+    transition: 0.5s ease-in;
+}
+
+.right-form button {
+  height: 40px;
+  width: 200px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 100px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.515);
+  cursor: pointer;
+}
+
+.left-form {
+  font-family: 'Open Sans';
+  margin-top: 80px;
+}
+
+.left-form p {
+  color: #6a6a6a;
+}
+
+.left-form span {
+  color: #6a6a6a;
+}
+
+@media screen and (max-width: 1380px) {
+  form {
+    margin-left: 200px;
+  }
+}
+@media screen and (max-width: 964px) {
+  form {
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width: 801px) {
+  form {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 586px) {
+  form {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.card-container {
+  position: absolute;
+  top: 100px;
+  left: 550px;
+  height: 500px;
+  width: 400px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+}
+.card-container img {
+  width: 100%;
+  border-radius: 5px;
+}
+.title-card {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  text-align: center;
+  color: black;
+}
+.title-card h1 span {
+  color: cyan;
+  text-shadow: 0 4px 20px cyan;
+}
+.desc-card {
+  margin-top: 20px;
+}
+.desc-card p {
+  color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 20px rgb(146, 146, 146);
+}
+.card-remove {
+  color: red;
+  font-family: 'Poppins';
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.password-check {
+  position: absolute;
+  top: 300px;
+  left: 600px;
+}
+
+#userInput {
+  height: 40px;
+}
+
+#checkButton {
+  height: 40px;
+  width: 150px;
+  background: none;
+  border: 1px solid black;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  position: relative;
+  left: 105px;
+  top: 20px;
+}
+
+#checkButton:active {
+  box-shadow: 0 0 0 black;
+}
+
+#randomNumber {
+  position: relative;
+  left: 10px;
+  font-size: 20px;
+  font-family: 'Montserrat';
+}

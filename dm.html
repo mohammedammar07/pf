@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ammar's Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assests/css/dm.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body id="dark">
+  <!-- <nav id="navbar">  
+      <div id="logo" class="logo-div">Ammar's Portfolio</div>
+      <div id="ulr" class="ul-div ulres">
+        <ul id="navul">
+          <i id="nicon" onclick="darkmode()" class="fa">&#xf186;</i>
+          <i id="nicon2" onclick="darkmode2()" class="fa"
+            ><a href="">&#xf186;</a></i
+          >
+          <li class="list-items home">
+            <a id="Home" href="#">Home</a>
+          </li>
+          <li class="list-items">
+            <a id="navlink" href="#skills">Skills</a>
+          </li>
+          <li id="Projects" class="list-items">
+            <a id="navlink2" href="#projects">Projects</a>
+          </li>
+          <li id="Education" class="list-items">
+            <a id="navlink3" href="#">Education</a>
+          </li>
+          <li id="Contact" class="list-items">
+            <a id="navlink4" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div onclick="burger()" class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav> -->
+  <nav class="navbar h-nav-resp">
+    <div id="logonav" class="logo-div">Ammar's Portfolio</div>
+    <ul class="nav-list v-class-resp">
+      <a href="/index2.html"><i id="nicon" onclick="darkmode()" class="fa">&#xf186;</i></a>
+      <li><a id="navlink" href="home">Home</a></li>
+      <li><a id="navlink" href="#skills">Skills</a></li>
+      <li><a id="navlink" href="#projects">Projects</a></li>
+      <!-- <li><a id="navlink" href="">Education</a></li> -->
+      <li><a id="navlink" href="#hireme">Hire Me</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+    </div>
+  </nav>
+
+  <div class="home-div">
+    <div class="left-div">
+      <h1>
+        Hi, <br />
+        I'am <span id="amm">Ammar</span> <br />
+      </h1>
+      <span id="type"></span><br /><br />
+      <!-- <button id="btnc">Contact</button> -->
+    </div>
+    <div class="right-div">
+      <!-- <img id="splashimg" class="splash-img" src="/assests/images/splash.avif" alt="" /> -->
+      <img id="zimg" class="z-img" src="assests/images/7581145.webp" alt="" />
+    </div>
+  </div>
+  <div class="skills">
+    <h1 id="skills" data-aos="fadeIn">My Technical Skills</h1>
+    <div class="skills-main">
+      <span><i data-aos="fadeOut" data-aos-delay="300" id="icon-skills" class="fa-brands fa-html5"></i></span>
+      <span><i data-aos="fadeOut" data-aos-delay="500" id="icon-skills" class="fa-brands fa-css3"></i></span>
+      <span><i data-aos="fadeOut" data-aos-delay="600" id="icon-skills" class="fa-brands fa-js"></i></span>
+      <!-- <span><i data-aos="fadeOut" data-aos-delay="700" id="icon-skills" class="fa-brands fa-java"></i></span> -->
+      <span><i data-aos="fadeOut" data-aos-delay="800" id="icon-skills" class="fa-brands fa-react"></i></span>
+      <!-- <span><i data-aos="fadeOut" data-aos-delay="900" id="icon-skills" class="fa-brands fa-swift"></i></span> -->
+      <span><i data-aos="fadeOut" data-aos-delay="900" id="icon-skills" class="fa-brands fa-bootstrap"></i></span>
+      <span><i data-aos="fadeOut" data-aos-delay="900" id="icon-skills" class="fa-brands fa-github"></i></span>
+      <!-- <span><i data-aos="fadeOut" data-aos-delay="900" id="icon-skills" class="fa-brands fa-php"></i></span> -->
+    </div>
+    <!-- <div class="progress-bars">
+      <div class="progress-bar">
+        <div data-aos="fadeOut" data-aos-delay="300" class="anim-bar"></div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="myknow">
+      <h1>My Coding Knowledge</h1>
+      <pre class="pre1">
+        <button id="btn" onclick="copyCode()">COPY</button>
+        <u><b>HTML | UNDERLINE HOVER EFFECT CODE</b></u> <br>
+        <code id="codes">
+       <span class="brspan">&lt;</span><span class="codespan">span</span> <span class="classspan">class</span>=<span class="clname">"underline"</span><span class="brspan">&gt;</span>HOVER ME<span class="brspan">&lt;/</span><span class="codespan">span</span><span class="brspan">&gt;</span> <br>
+        </code>
+        <u><b>CSS</b></u>
+        <code id="codes">
+          <span class="cssclassb">.underline {</span>
+            <span class="propcss">color</span>: <span class="propent">black</span>;
+            <span class="propcss">position</span>: <span class="propent">relative</span>;
+            <span class="cssclassb">}</span>
+          <span class="cssclassb">.underline::after {</span>
+           <span class="propcss">content</span>: <span class="propent">""</span>;
+           <span class="propcss">position</span>: <span class="propent">absolute</span>;
+           <span class="propcss">top</span>: <span class="propent">0</span>;
+           <span class="propcss">left</span>: <span class="propent">0</span>;
+           <span class="propcss">height</span>: <span class="propent">2px</span>;
+           <span class="propcss">width</span>: <span class="propent">100%</span>;
+           <span class="propcss">transform</span>: <span class="propent">scaleX(0)</span>;
+           <span class="propcss">transform-origin</span>: <span class="propent">right</span>;
+           <span class="propcss">transition</span>: <span class="propent">transform 0.25s</span>;
+           <span class="cssclassb">}</span>
+           <span class="cssclassb">.underline:hover::after {</span>
+           <span class="propcss">transform</span>: <span class="propent">scaleX(1)</span>;
+           <span class="propcss">transform-origin</span>: <span class="propent">left</span>;
+           <span class="cssclassb">}</span>
+        </code> 
+      </pre>
+    </div> -->
+  <div id="projects" class="portfolio">
+    <div class="container">
+      <h1 class="title">My Projects</h1>
+      <div class="projects-list">
+        <div data-aos="fadeOut" data-aos-delay="300" class="project">
+          <img src="https://static-xf1.vietnix.vn/wp-content/uploads/2022/08/amazon-1024x1024.webp" alt="" />
+          <div class="layer">
+            <h3>Amazon Clone</h3>
+            <p>
+              This is a clone of popular e-commerce website Amazon. I have created it with <q>HTML CSS and JAVASCRIPT</q>
+            </p><br>
+            <a href="/projects/amazon/amaz.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div data-aos="fadeOut" data-aos-delay="500" class="project">
+          <img src="https://www.spacex.com/static/images/share.jpg" alt="" />
+          <div class="layer">
+            <h3>Space X Clone</h3>
+            <p>
+              This is a clone of Astronautics company Space X. I have created it with <q>HTML and CSS</q>
+            </p><br>
+            <a href="/projects/spaceX/spacex.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div data-aos="fadeOut" data-aos-delay="700" class="project">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Flag_map_of_Saudi_Arabia.svg/1200px-Flag_map_of_Saudi_Arabia.svg.pngwww" alt="" />
+          <div class="layer">
+            <h3>Data Wide Clone</h3>
+            <p>
+              The app connects you to the talented people around the world.
+              download it from play store.
+            </p><br>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div id="hireme" class="main-footer">
+      <div class="left-footer">
+        <h1>Hire me<span>?</span></h1>
+        <form name="submit-to-google-sheet">
+          <div class="right-form">
+            <input type="text" name="fullName" placeholder="Full Name">
+            <hr class="linehr"><br>
+            <input type="email" name="Email" placeholder="E-mail">
+            <hr class="linehr"><br>
+            <input type="text" name="Message" placeholder="Message"><br>
+            <hr class="linehr">
+            <br>
+            <button>Contact Us</button>
+          </div>
+          <div class="left-form">
+            <h2>Email</h2>
+            <p>mohammedammar771@gmail.com</p><br><br>
+            <!-- <h2>Based in</h2>
+            <span>San Francisco, <br> California</span> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </footer>
+  <!-- <div id="cursordot" class="cursor-dot" data-cursor-dot></div>
+<div id="cursorout" class="cursor-outline" data-cursor-outline></div> -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    var typed = new Typed("#type", {
+      strings: ["Web Developer", "App Developer"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      startDelay: 50,
+      loop: true,
+      showCursor: true,
+      cursorChar: "_",
+      //   autoInsertCss: true,
+      //   fadeOut: false,
+      //   fadeOutClass: 'typed-fade-out',
+      //   fadeOutDelay: 500,
+      //   contentType: 'html ',
+      //   stringsElement: null,
+    });
+    AOS.init({
+      duration: 3000,
+      once: true,
+    });
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbywafp2DhKZRWcOcNP-h27bUtexdrVnsFjZO8PYsME5OpI8a3ZyJJJhC4ZojVgIc6p51g/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => 
+        form.reset()
+        )
+        .catch(error => console.error('Error!', error.message))
+    })  
+
+  </script>
+  <script src="/assests/js/script.js"></script>
+</body>
+
+</html>
